@@ -1,6 +1,6 @@
 const through = require('through2');
 
-function write(buffer, encoding, next) {
+function write(buffer, _, next) {
   this.push(buffer.toString().toUpperCase());
   next();
 }
